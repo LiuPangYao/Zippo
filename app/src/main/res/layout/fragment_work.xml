@@ -1,0 +1,420 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GHOSTWHITE"
+    android:clickable="true"
+    tools:context="com.example.user.zippo.WorkFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/FILE"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeWork">
+
+        <RelativeLayout
+            android:id="@+id/relativeBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 大頭貼、姓名 -->
+            <RelativeLayout
+                android:id="@+id/relativeImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/offset"
+                android:background="@drawable/corners_bg">
+
+                <ImageView
+                    android:id="@+id/imageViewEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/txtIntroduction"
+                    android:layout_marginBottom="@dimen/offset"
+                    android:layout_marginRight="@dimen/offset"
+                    android:background="@drawable/selector_item_edit"
+                    android:onClick="onClick" />
+
+                <ImageView
+                    android:id="@+id/imageViewPicture"
+                    android:layout_width="150dip"
+                    android:layout_height="150dip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/offset"
+                    android:layout_marginTop="@dimen/offset_2"
+                    android:onClick="onClick"
+                    android:src="@drawable/edit_person_photo" />
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageViewPicture"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/NAME"
+                    android:textSize="@dimen/font_size_large" />
+
+                <com.example.user.zippo.custom.XCFlowLayout
+                    android:id="@+id/flowLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtName"
+                    android:layout_marginTop="5dip"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/txtIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/flowLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="45dip"
+                    android:layout_marginRight="45dip"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center|left"
+                    android:maxLines="6"
+                    android:paddingBottom="@dimen/offset"
+                    android:singleLine="false" />
+
+            </RelativeLayout>
+
+            <!-- Email、網址 -->
+            <RelativeLayout
+                android:id="@+id/relativeMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeImageView"
+                android:layout_marginBottom="@dimen/offset"
+                android:layout_marginLeft="@dimen/offset"
+                android:layout_marginRight="@dimen/offset"
+                android:background="@drawable/corners_bg">
+
+                <ImageView
+                    android:id="@+id/imageViewEdit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="@dimen/offset"
+                    android:layout_marginLeft="@dimen/offset"
+                    android:layout_marginRight="@dimen/offset"
+                    android:layout_marginTop="@dimen/offset"
+                    android:background="@drawable/selector_item_edit"
+                    android:onClick="onClick" />
+
+                <View
+                    android:id="@+id/viewSeparate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/view_height"
+                    android:background="@color/BLACK" />
+
+                <RelativeLayout
+                    android:id="@+id/imageViewMail_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/viewSeparate"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip"
+                    android:layout_toLeftOf="@+id/imageViewEdit1"
+                    android:layout_toStartOf="@+id/imageViewEdit1">
+
+                    <ImageView
+                        android:id="@+id/imageViewMail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/ic_mail_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/txtMail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/imageViewMail"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/MAIL"
+                        android:textSize="@dimen/font_size_medium" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/imageViewMail_re"
+                    android:layout_margin="5dip">
+
+                    <TextView
+                        android:id="@+id/txtBlogAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/imageViewBlog"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/BLOG_ADDRESS"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/imageViewBlog"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/ic_web_black_24dp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- 工作經驗 -->
+            <RelativeLayout
+                android:id="@+id/relativeWorkExperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeMail"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/corners_bg">
+
+                <ImageView
+                    android:id="@+id/imageViewEdit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/selector_item_edit"
+                    android:onClick="onClick" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="@+id/imageViewEdit2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/offset_2"
+                    android:layout_marginLeft="@dimen/offset"
+                    android:layout_marginTop="@dimen/offset_2"
+                    android:layout_toLeftOf="@+id/imageViewEdit2">
+
+                    <TextView
+                        android:id="@+id/txtWorkExperience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/WORK_EXPERIENCE"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/txtWorkEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/offset"
+                        android:layout_toRightOf="@+id/txtWorkExperience"
+                        android:text="@string/NO_EDIT"
+                        android:textSize="@dimen/font_size_medium" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!-- 教育背景 -->
+            <RelativeLayout
+                android:id="@+id/relativeTeach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeWorkExperience"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/corners_bg">
+
+                <ImageView
+                    android:id="@+id/imageViewEdit3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/selector_item_edit"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:id="@+id/txtTeach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="@dimen/offset_2"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="@dimen/offset_2"
+                    android:text="@string/TECH_EXPERIENCE"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtTeachEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/offset"
+                    android:layout_toRightOf="@+id/txtTeach"
+                    android:text="@string/NO_EDIT"
+                    android:textSize="@dimen/font_size_medium" />
+
+            </RelativeLayout>
+
+            <!-- 個人成就 -->
+            <RelativeLayout
+                android:id="@+id/relativePersonal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeTeach"
+                android:layout_marginBottom="10dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/corners_bg"
+                android:textSize="@dimen/font_size_medium">
+
+                <ImageView
+                    android:id="@+id/imageViewEdit4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/selector_item_edit"
+                    android:onClick="onClick" />
+
+                <TextView
+                    android:id="@+id/txtPersonal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:text="@string/PERSONAL_EXPERIENCE"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeSkill"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txtPersonal">
+
+                    <TextView
+                        android:id="@+id/txtPersonal1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="@string/PAPER_SKILL"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/txtPersonalEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/offset"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/txtPersonal1"
+                        android:text="@string/NO_EDIT"
+                        android:textSize="@dimen/font_size_medium" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/relativeSkill">
+
+                    <TextView
+                        android:id="@+id/txtPersonal2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="10dip"
+                        android:text="@string/LANGUAGE_SKILL"
+                        android:textColor="@color/BLACK"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/txtPersonalEdit1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/offset"
+                        android:layout_marginTop="10dip"
+                        android:layout_toRightOf="@+id/txtPersonal2"
+                        android:text="@string/NO_EDIT"
+                        android:textSize="@dimen/font_size_medium" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fragment_container_working"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_weight="1" />
+
+</RelativeLayout>

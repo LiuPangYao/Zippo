@@ -1,0 +1,101 @@
+<resources>
+    <!-- 常用字串 -->
+    <string name="app_name">Zippo</string>
+    <string name="SETTING">設定</string>
+    <string name="CONTENT">內容</string>
+    <string name="NEWS">公告</string>
+    <string name="LIST">列表</string>
+    <string name="NO_INFORMATION">沒有資料</string>
+    <string name="VERSION">版本</string>
+    <string name="VERSION_">v&#160;</string>
+    <string name="PRIVACY_POLICY">隱私權政策</string>
+    <string name="TITLE">標題</string>
+    <string name="TITLE_NAME">項目名稱</string>
+    <string name="DATE">日期</string>
+    <string name="FILE">檔案</string>
+    <string name="RESET">重置資料</string>
+    <string name="DELETE_MESSAGE">清除資料</string>
+    <string name="LOGOUT">登出</string>
+    <string name="OK">確認</string>
+    <string name="CANCEL">取消</string>
+    <string name="OK_RESET">確認重置資料?</string>
+    <string name="OK_DELETE">確認清除資料?</string>
+    <string name="OK_LOGOUT">確認登出?</string>
+    <string name="CHECK_LOGOUT">確認離開APP?</string>
+    <string name="LARGE">大</string>
+    <string name="MEDIUM">中</string>
+    <string name="SMALL">小</string>
+    <string name="TEXT_SIZE">字體大小</string>
+    <string name="INTRODUCTION">專業簡介</string>
+    <string name="SAVE">儲存</string>
+    <string name="NAME">姓名</string>
+    <string name="NAME_BEFORE">姓</string>
+    <string name="NAME_AFTER">名</string>
+    <string name="WORK_TITLE">頭銜</string>
+    <string name="WORK_NOW">現職</string>
+    <string name="WORK_STYLE">產業</string>
+    <string name="TEACH">學歷</string>
+    <string name="COUNTRY">國家</string>
+    <string name="PROFESSIONAL_INTRODUCTION">專業簡介</string>
+    <string name="SEPARATE_LINE">分隔線</string>
+    <string name="UPDATE_NO_SAVE">變更未儲存，是否關閉?</string>
+    <string name="NO_EDIT">未編輯</string>
+    <string name="WORK_EXPERIENCE">工作經歷</string>
+    <string name="TECH_EXPERIENCE">教育背景</string>
+    <string name="PERSONAL_EXPERIENCE">個人成就</string>
+    <string name="LANGUAGE_SKILL">語言能力</string>
+    <string name="PAPER_SKILL">證照資格</string>
+    <string name="MAIL">信箱</string>
+    <string name="BACKUP_MAIL">信箱&#160;(備份)</string>
+    <string name="MAIN_MAIL">主要&#160;信箱</string>
+    <string name="MAIL_TABLE">信箱欄位</string>
+    <string name="BACKUP_MAIL_TABLE">備份信箱欄位</string>
+    <string name="ARRAY_ITEM">相關介紹</string>
+    <string name="EDIT_CONNECTION">編輯聯絡資料</string>
+    <string name="BLOG_ADDRESS">BLOG&#160;網址</string>
+    <string name="BACKUP_BLOG_ADDRESS">BLOG&#160;網址&#160;(備份)</string>
+    <string name="MAIN_BLOG_ADDRESS">主要&#160;BLOG&#160;網址</string>
+    <string name="BLOG_ADDRESS_TABLE">BLOG欄位</string>
+    <string name="BACKUP_BLOG_ADDRESS_TABLE">備份BLOG欄位</string>
+    <string name="ADD">新增</string>
+    <string name="REMOVE">移除</string>
+    <string name="ERROR">錯誤</string>
+    <string name="NULL">沒有輸入</string>
+    <string name="EDIT">編輯</string>
+    <string name="SAVE_SUCCESSFUL">儲存完成!</string>
+    <string name="EDIT_COLOR">編輯字數(至多100字)</string>
+    <string name="WORK_NAME">職稱</string>
+    <string name="COMPANY_NAME">公司名稱</string>
+    <string name="LOCATION">地點</string>
+    <string name="WORK_START">到職日期</string>
+    <string name="WORK_END">離職日期</string>
+    <string name="WORK_SCRIBE">職務說明</string>
+    <string name="SCHOOL_NAME">學校名稱</string>
+    <string name="SCHOOL_DEGREE">學位</string>
+    <string name="SCHOOL_MAIN">科系類別</string>
+    <string name="SCHOOL_IN">入學年份</string>
+    <string name="SCHOOL_OUT">畢業年份</string>
+    <string name="GRADE">成績</string>
+    <string name="CHOOSE_TYPE">照片取得方式</string>
+    <string name="CAMERA">相機</string>
+    <string name="ALBUM">相簿</string>
+    <string name="LANGUAGE">語言</string>
+
+    <string name="camera_open_error">相機開啟失敗</string>
+    <string name="not_specify_a_directory">找不到指定路徑</string>
+
+    <string name="privacy">當您使用APP功能時，我們將視該服務功能性質，請您提供必要的APP系統權限，並在該特定目的範圍內處理及利用您的個人資料；
+        本APP不會將個人資料用於其他用途。本人不會於任何伺服器會自行記錄相關行徑，包括您使用連線設備的IP位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等。</string>
+    <string name="privacy1">本APP其他第三方APP的網路連結或廣告SDK行為，不適用本網站的隱私權保護政策，您必須參考該連結網站中或該廣告公司的隱私權保護政策。</string>
+    <string name="privacy2">本APP絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關。</string>
+    <string name="privacy3">本APP隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於App上。</string>
+    <string name="privacy4">公告日期 : 2017-05-02</string>
+    <string name="ERROR_INPUTTYPE">輸入格式有誤!</string>
+
+    <string-array name="SPINNER_SKILL">
+        <item>略懂</item>
+        <item>中等</item>
+        <item>精通</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,166 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:clickable="true"
+    tools:context="com.example.user.zippo.EditConnectionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/relativeEditConnection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/view_height"
+                android:layout_alignParentLeft="true"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/EDIT_CONNECTION"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/font_size_medium" />
+
+            <ImageView
+                android:id="@+id/imageViewClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/offset"
+                android:background="@drawable/selector_item_close"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/txtSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/offset"
+                android:onClick="onClick"
+                android:text="@string/SAVE"
+                android:textColor="@color/WHITE"
+                android:textSize="@dimen/font_size_medium" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeCustom"
+            android:layout_marginLeft="15dip"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/addEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutMail"
+            android:layout_marginLeft="15dip"
+            android:drawableLeft="@drawable/ic_add_black_24dp"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="@string/ADD"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_size_medium" />
+
+        <RelativeLayout
+            android:id="@+id/relativeCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeEditConnection"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="@dimen/offset">
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/MAIL"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/font_size_medium" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtEmail"
+                android:editable="true"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeBlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addEmail"
+            android:layout_marginBottom="@dimen/offset"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="@dimen/offset">
+
+            <TextView
+                android:id="@+id/txtBlog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/offset"
+                android:text="@string/BLOG_ADDRESS"
+                android:textColor="@color/BLACK"
+                android:textSize="@dimen/font_size_medium" />
+
+            <EditText
+                android:id="@+id/edtBlog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtBlog"
+                android:editable="true"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_medium" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutBlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeBlog"
+            android:layout_marginLeft="15dip"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/addBlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayoutBlog"
+            android:drawableLeft="@drawable/ic_add_black_24dp"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:text="@string/ADD"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="15dip"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+
+</ScrollView>

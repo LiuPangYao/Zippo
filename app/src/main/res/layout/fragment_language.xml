@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LanguageFragment">
+
+    <EditText
+        android:id="@+id/edtLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="@string/LANGUAGE"
+        android:textColorHint="@color/GHOSTWHITE"
+        android:layout_margin="@dimen/offset"/>
+
+    <Spinner
+        android:id="@+id/spinnerSkill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtLanguage"
+        android:layout_margin="@dimen/offset"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerSkill"
+        android:layout_centerHorizontal="true"
+        android:text="@string/SAVE"
+        android:layout_margin="@dimen/offset"/>
+</RelativeLayout>

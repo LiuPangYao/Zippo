@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:clickable="true"
+    tools:context="com.example.user.zippo.SettingFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/SETTING"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeSetting"
+        android:padding="10dip"
+        android:text="@string/VERSION"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/font_size_medium" />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeSetting"
+        android:padding="10dip"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/font_size_medium" />
+
+    <View
+        android:id="@+id/viewLine1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/txtVersion"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@color/BLACK" />
+
+    <TextView
+        android:id="@+id/txtFontSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/viewLine5"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/viewLine1"
+        android:gravity="center"
+        android:paddingLeft="10dip"
+        android:text="@string/TEXT_SIZE"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/font_size_medium" />
+
+    <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/segmented2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/viewLine1"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        segmentedgroup:sc_border_width="2dp"
+        segmentedgroup:sc_corner_radius="10dp">
+
+        <RadioButton
+            android:id="@+id/buttonLarge"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/LARGE"
+            android:textSize="@dimen/font_size_medium" />
+
+        <RadioButton
+            android:id="@+id/buttonMedium"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MEDIUM"
+            android:textSize="@dimen/font_size_medium" />
+
+        <RadioButton
+            android:id="@+id/buttonSmall"
+            style="@style/RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/SMALL"
+            android:textSize="@dimen/font_size_medium" />
+
+    </info.hoang8f.android.segmented.SegmentedGroup>
+
+    <View
+        android:id="@+id/viewLine5"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@+id/segmented2"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@color/BLACK" />
+
+    <TextView
+        android:id="@+id/txtPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewLine5"
+        android:onClick="onClick"
+        android:padding="10dip"
+        android:text="@string/PRIVACY_POLICY"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/font_size_medium" />
+
+    <View
+        android:id="@+id/viewLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="1dip"
+        android:layout_below="@+id/txtPrivacy"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@color/BLACK" />
+
+    <TextView
+        android:id="@+id/txtReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewLine2"
+        android:onClick="onClick"
+        android:padding="10dip"
+        android:text="@string/RESET"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/font_size_medium" />
+
+    <View
+        android:id="@+id/viewLine3"
+        android:layout_width="wrap_content"
+        android:layout_height="1dip"
+        android:layout_below="@+id/txtReset"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@color/BLACK" />
+
+    <TextView
+        android:id="@+id/txtDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewLine3"
+        android:onClick="onClick"
+        android:padding="10dip"
+        android:text="@string/DELETE_MESSAGE"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/font_size_medium" />
+
+    <View
+        android:id="@+id/viewLine4"
+        android:layout_width="wrap_content"
+        android:layout_height="1dip"
+        android:layout_below="@+id/txtDelete"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:background="@color/BLACK" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container_setting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"></FrameLayout>
+
+</RelativeLayout>

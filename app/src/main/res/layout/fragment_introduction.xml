@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:clickable="true"
+    tools:context="com.example.user.zippo.IntroductionFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeIntroduction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_height"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorPrimary" />
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/INTRODUCTION"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/font_size_medium" />
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/selector_item_close"
+            android:onClick="onClick" />
+
+        <TextView
+            android:id="@+id/txtSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/offset"
+            android:onClick="onClick"
+            android:text="@string/SAVE"
+            android:textColor="@color/WHITE"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/relativeIntroduction"
+        android:layout_marginBottom="@dimen/offset"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="@dimen/offset">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/NAME_AFTER"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtNameFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset"
+                    android:text="@string/NAME_BEFORE"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <EditText
+                    android:id="@+id/edtNameFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtWorkTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset_2"
+                    android:text="@string/WORK_TITLE"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <EditText
+                    android:id="@+id/edtWorkTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtWorkNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset"
+                    android:text="@string/WORK_NOW"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <EditText
+                    android:id="@+id/edtWorkNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtEdtWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/offset"
+                    android:drawableLeft="@drawable/ic_add_black_24dp"
+                    android:gravity="center"
+                    android:text="@string/EDIT"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtTeach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset"
+                    android:text="@string/TEACH"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <EditText
+                    android:id="@+id/edtTeach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtEdtTech"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/offset"
+                    android:drawableLeft="@drawable/ic_add_black_24dp"
+                    android:gravity="center"
+                    android:text="@string/EDIT"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset"
+                    android:text="@string/COUNTRY"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <EditText
+                    android:id="@+id/edtCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/txtIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/offset_2"
+                    android:text="@string/PROFESSIONAL_INTRODUCTION"
+                    android:textColor="@color/BLACK"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="100"
+                    app:counterOverflowTextAppearance="@style/CounterOverFlow"
+                    app:counterTextAppearance="@style/Counter"
+                    app:errorEnabled="true">
+
+                    <EditText
+                        android:id="@+id/edtIntroduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:minLines="6"
+                        android:gravity="left|top"
+                        android:textSize="@dimen/font_size_medium"
+                        android:textColorHint="@color/GHOSTWHITE"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1" />
+
+
+</RelativeLayout>

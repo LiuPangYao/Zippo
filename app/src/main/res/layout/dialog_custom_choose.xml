@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="150dp"
+    android:background="@drawable/corners_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dip"
+        android:layout_marginTop="15dip"
+        android:text="@string/CHOOSE_TYPE"
+        android:textColor="@color/BLACK"
+        android:textSize="@dimen/font_size_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dip">
+
+        <TextView
+            android:id="@+id/txtCamera"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_item_bg"
+            android:drawableTop="@drawable/ic_photo_camera_black_48dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingTop="@dimen/offset"
+            android:text="@string/CAMERA" />
+
+        <TextView
+            android:id="@+id/txtAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_item_bg"
+            android:drawableTop="@drawable/ic_picture_in_picture_black_48dp"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingTop="@dimen/offset"
+            android:text="@string/ALBUM" />
+
+    </LinearLayout>
+</LinearLayout>
